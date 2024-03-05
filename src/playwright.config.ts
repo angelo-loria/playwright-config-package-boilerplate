@@ -32,8 +32,8 @@ export default defineConfig({
     ? [
         ["line"],
         ["html", { open: "never" }],
-        ["junit", { outputFile: "junit.xml" }],
-        ["blob", { outputDir: "blob-report" }],
+        ["junit", { outputFile: path.join(process.cwd(), "junit.xml") }],
+        ["blob", { outputDir: path.join(process.cwd(), "blob-report") }],
         [
           "playwright-tesults-reporter",
           {
