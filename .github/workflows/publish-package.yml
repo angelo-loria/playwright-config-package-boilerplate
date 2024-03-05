@@ -11,10 +11,14 @@ permissions:
     packages: write
     pull-requests: write # for leaving a comment on PR
 
+env:
+  PACKAGE_VERSION: ${{ github.ref_name == 'main' && format('1.0.{0}', github.RUN_NUMBER) || format('0.{0}.{1}', github.event.number, github.RUN_NUMBER) }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: npm version ${{ env.PACKAGE_VERSION }}
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
