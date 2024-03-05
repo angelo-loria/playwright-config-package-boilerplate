@@ -18,6 +18,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.json"
   },
+  "module": "dist/playwright.config.js",
   "dependencies": {
     "@axe-core/playwright": "^4.8.0",
     "@playwright/test": "1.42.1",
