@@ -18,13 +18,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: npm version ${{ env.PACKAGE_VERSION }}
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com'
+      # Set package version
+      - run: npm version ${{ env.PACKAGE_VERSION }}
       - run: yarn install
       - run: yarn publish
         env:
