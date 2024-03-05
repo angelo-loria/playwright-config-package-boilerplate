@@ -24,6 +24,6 @@
     "playwright-tesults-reporter": "^1.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.24",
+    "@types/node": "^20.11.24"
   }
 }
