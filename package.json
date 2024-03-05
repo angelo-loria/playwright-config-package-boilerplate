@@ -1,6 +1,6 @@
 {
   "name": "@angelo-loria/playwright-config-package",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "An example of how to package up Playwright configuration files for shared usage across multiple Playwright projects",
   "main": "index.js",
   "repository": {
