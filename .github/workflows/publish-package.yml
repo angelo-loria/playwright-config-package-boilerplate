@@ -30,6 +30,6 @@ jobs:
           npm version ${{ env.PACKAGE_VERSION }}
       - run: yarn install
       - run: yarn build
-      - run: yarn publish
+      - run: yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
