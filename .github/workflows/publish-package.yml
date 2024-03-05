@@ -9,7 +9,6 @@ on:
 permissions:
     contents: read
     packages: write
-    pull-requests: write # for leaving a comment on PR
 
 env:
   PACKAGE_VERSION: ${{ github.ref_name == 'main' && format('1.0.{0}', github.RUN_NUMBER) || format('0.{0}.{1}', github.event.number, github.RUN_NUMBER) }}
